@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--font);
+    background-color: var(--color-background);
+    color: white;
 }
 
 :root {
@@ -95,7 +97,36 @@ nav .second-nav i {
 
 
 
+/* GENRES STARTS */
+.genres {
 
+}
+
+.genres div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.genres div i {
+    margin: 0 auto;
+    width: 80px;
+    padding: 15px;
+    border: 2px solid var(--color-yellow-light);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: var(--color-yellow-light);
+}
+
+.genres div p {
+    font-size: 1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+/* GENRES ENDS */
 
 
 /* FOOTER STARTS */
