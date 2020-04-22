@@ -1,3 +1,8 @@
+<!--
+    todo: This file is intended to have both the sign up and login form.
+    todo: Remember to use Materializes form classes!!!
+-->
+
 <?php
 
 ?>
