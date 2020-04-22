@@ -1,4 +1,4 @@
-<div class="genres row">
+<div class="row">
     <div class="col l1 offset-l2">
         <i class="fas fa-swords"></i>
         <p>Action</p>

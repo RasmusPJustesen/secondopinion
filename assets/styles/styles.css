@@ -24,11 +24,17 @@ body {
 }
 
 /* HEADER STARTS */
-nav  {
+header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     background-color: var(--color-headerfooter-background);
-    padding: 0 15px;
+    padding: 0 0.75rem;
     font-weight: var(--font-light);
 }
 
@@ -97,18 +103,65 @@ nav .second-nav i {
 
 
 
-/* GENRES STARTS */
-.genres {
-
+/* BEST REVIEWS STARTS */
+.best-reviews .best-reviews-container {
+    display: flex;
 }
 
-.genres div {
+.best-reviews h3 {
+    padding-left: 0.75rem;
+    margin: 80px 0;
+}
+
+.best-reviews .best-reviews-container .best-review-item img {
+    width: 100%;
+}
+
+.best-reviews .best-reviews-container .best-review-item .best-review-stars {
+    font-size: 2em;
+    color: var(--color-stars-grey);
+}
+
+.best-reviews .best-reviews-container .best-review-item .best-review-stars i {
+    cursor: pointer;
+}
+
+.best-reviews .best-reviews-container .best-review-item h5 {
+    font-size: 2.5em;
+    font-weight: var(--font-medium);
+}
+
+.best-reviews .best-reviews-container .best-review-item button {
+    width: 100%;
+    font-size: 2.5em;
+    padding: 10px 0;
+    font-weight: var(--font-light);
+    background-color: var(--color-purple);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+/* BEST REVIEWS ENDS */
+
+
+
+
+/* GENRES STARTS */
+.genres h3 {
+    padding-left: 0.75rem;
+    margin: 100px 0 80px 0;
+    text-transform: uppercase;
+    font-weight: var(--font-medium);
+}
+
+.genres .row div {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.genres div i {
+.genres .row div i {
     margin: 0 auto;
     width: 80px;
     padding: 15px;
@@ -121,7 +174,7 @@ nav .second-nav i {
     color: var(--color-yellow-light);
 }
 
-.genres div p {
+.genres .row div p {
     font-size: 1em;
     text-align: center;
     text-transform: uppercase;

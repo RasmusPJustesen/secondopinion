@@ -1,1 +1,3 @@
-<?php
+<section class="slideshow">
+
+</section>
