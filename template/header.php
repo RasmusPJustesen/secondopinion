@@ -15,7 +15,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
         <!-- Font Awesome -->
-        <script src="https://kit.fontawesome.com/6f87caae74.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/e112723580.js" crossorigin="anonymous"></script>
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/styles/styles.css">
