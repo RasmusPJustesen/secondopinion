@@ -9,6 +9,9 @@
     <!-- Title & favicon -->
     <title>Second Opinion</title>
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+
     <!-- CSS Libraries -->
         <!-- Materialize -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -31,8 +34,8 @@
             <a>Logo</a>
             <div>
                 <a href="index.php">Home</a>
-                <a href="movies.php">Movies</a>
-                <a href="series.php">Series</a>
+                <a href="explore.php?content=movies">Movies</a>
+                <a href="explore.php?content=series">Series</a>
             </div>
         </div>
         <div class="second-nav">

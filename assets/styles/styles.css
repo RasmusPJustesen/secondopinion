@@ -29,6 +29,7 @@ header {
     position: fixed;
     width: 100%;
     background-color: var(--color-headerfooter-background);
+    z-index: 100;
 }
 
 nav {
@@ -101,6 +102,21 @@ nav .second-nav i {
     font-size: 1em;
 }
 /* HEADER ENDS */
+
+
+
+/* CAROUSEL STARTS */
+.carousel .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .carousel-item img {
+    height: 700px;
+    width: auto;
+}
+/* CAROUSEL ENDS */
 
 
 

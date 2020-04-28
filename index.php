@@ -1,6 +1,8 @@
 <?php include "template/header.php"?>
 
-<?php include "template/slideshow.php" ?>
+    <section class="slideshow container">
+        <?php include "template/carousel.php" ?>
+    </section>
 
     <section class="best-reviews container">
         <h3>Best Reviews</h3>
