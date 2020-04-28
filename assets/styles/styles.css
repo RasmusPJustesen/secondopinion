@@ -108,8 +108,6 @@ nav .second-nav i {
 }
 /* HEADER ENDS */
 
-
-
 /* CAROUSEL STARTS */
 .carousel .carousel-item {
     display: flex;
@@ -172,9 +170,6 @@ nav .second-nav i {
 }
 /* CAROUSEL ENDS */
 
-
-
-
 /* BEST REVIEWS STARTS */
 .best-reviews .best-reviews-container {
     display: flex;
@@ -215,9 +210,6 @@ nav .second-nav i {
     cursor: pointer;
 }
 /* BEST REVIEWS ENDS */
-
-
-
 
 /* GENRES STARTS */
 .genres {
@@ -262,6 +254,34 @@ nav .second-nav i {
     text-transform: uppercase;
 }
 /* GENRES ENDS */
+
+/* EXPLORE STARTS */
+.explore-title h1 {
+    margin: 50px 0;
+}
+
+.explore .row .col img {
+    width: 100%;
+}
+
+.explore .row .col div i {
+    margin: 3px 2px 7px 2px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.explore .row .col button {
+    width: 100%;
+    font-size: 1.5em;
+    padding: 5px 0;
+    font-weight: var(--font-light);
+    background-color: var(--color-purple);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+/* EXPLORE ENDS */
 
 
 /* FOOTER STARTS */
