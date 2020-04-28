@@ -2,7 +2,7 @@
 
 <?php include "template/slideshow.php" ?>
 
-    <section class="best-reviews">
+    <section class="best-reviews container">
         <h3>Best Reviews</h3>
         <div class="best-reviews-container row">
             <div class="best-review-item col l4">
@@ -43,7 +43,7 @@
             </div>
         </div>
     </section>
-    <section class="genres">
+    <section class="genres container">
         <h3>Choose genre</h3>
         <?php include "template/genres.php" ?>
     </section>

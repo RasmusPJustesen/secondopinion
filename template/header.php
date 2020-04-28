@@ -26,7 +26,7 @@
 <body>
 
 <header>
-    <nav>
+    <nav class="container">
         <div class="main-nav">
             <a>Logo</a>
             <div>
