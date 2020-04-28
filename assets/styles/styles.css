@@ -229,3 +229,38 @@ footer .custext {
     text-align: center;
 }
 /* FOOTER ENDS */
+
+
+/*ACCOUNT STARTS */
+
+.btn, .btn-large, .btn-small {
+    background-color: #7C87FC;
+    margin-bottom: 20px;
+}
+
+label {
+    color: white;
+}
+
+form {
+    max-width: 460px;
+    margin: 80px auto;
+    padding: 20px 20px 20px 20px;
+    border: solid 4px #F8C96D;
+    border-radius: 20px;
+}
+
+
+h4 {
+    padding-bottom: 40px;
+    color: white;
+}
+
+
+.input-field {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+/*ACCOUNT ENDS  */
