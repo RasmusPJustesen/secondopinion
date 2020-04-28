@@ -16,22 +16,30 @@
     </div>
 </div>
 <script>
+    let interval = setInterval(function(){
+        $('.carousel').carousel('next');
+    }, 3000);
+
     $(document).ready(function(){
         $('.carousel').carousel({
             fullWidth: true,
             indicators: true
         });
+
+        interval;
     });
 
     $('.carousel-arrow-right-item').click(function(e){
         e.preventDefault();
         e.stopPropagation();
         $('.carousel').carousel('next');
+        clearInterval(interval);
     });
 
     $('.carousel-arrow-left-item').click(function(e){
         e.preventDefault();
         e.stopPropagation();
         $('.carousel').carousel('prev');
+        clearInterval(interval);
     });
 </script>
