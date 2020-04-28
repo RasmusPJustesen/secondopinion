@@ -136,6 +136,40 @@ nav .second-nav i {
 .carousel .indicators .indicator-item.active {
     background-color: var(--color-yellow-light);
 }
+
+.carousel .carousel-arrow-left {
+    position: absolute;
+    top: 0; left: 0;
+    width: 10%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .carousel-arrow-left-item {
+    width: 40px; height: 40px;
+    border-left: 3px solid var(--color-yellow-dark);
+    border-bottom: 3px solid var(--color-yellow-dark);
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.carousel .carousel-arrow-right {
+    position: absolute;
+    top: 0; right: 0;
+    width: 10%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .carousel-arrow-right-item {
+    width: 40px; height: 40px;
+    border-right: 3px solid var(--color-yellow-dark);
+    border-bottom: 3px solid var(--color-yellow-dark);
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
 /* CAROUSEL ENDS */
 
 

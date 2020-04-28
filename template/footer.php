@@ -13,6 +13,6 @@
 </footer>
 
 <!-- Scripts here -->
-
+<script src="assets/scripts/fixHeaderHiding.js"></script>
 </body>
 </html>

@@ -8,6 +8,12 @@
     <div class="carousel-item green white-text" href="#three!">
         <img src="assets/images/tigerking.jpg" alt="">
     </div>
+    <div class="carousel-arrow-left">
+        <div class="carousel-arrow-left-item"></div>
+    </div>
+    <div class="carousel-arrow-right">
+        <div class="carousel-arrow-right-item"></div>
+    </div>
 </div>
 <script>
     $(document).ready(function(){
@@ -15,5 +21,17 @@
             fullWidth: true,
             indicators: true
         });
+    });
+
+    $('.carousel-arrow-right-item').click(function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.carousel').carousel('next');
+    });
+
+    $('.carousel-arrow-left-item').click(function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.carousel').carousel('prev');
     });
 </script>
