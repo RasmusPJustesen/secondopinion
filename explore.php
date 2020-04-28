@@ -12,7 +12,9 @@
         <?php include "template/genres.php" ?>
     </section>
 
+
     <section class="explore container">
+        <!-- TODO: all of this will be rewritten using a php foreach loop -->
         <div class="row">
             <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
                 <div>
