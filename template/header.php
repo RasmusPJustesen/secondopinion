@@ -31,7 +31,7 @@
 <header>
     <nav class="container">
         <div class="main-nav">
-            <a>Logo</a>
+            <a href=""><img src="assets/images/logo.png" class="logo" alt=""></a>
             <div>
                 <a href="index.php">Home</a>
                 <a href="explore.php?content=movies">Movies</a>

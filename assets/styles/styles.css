@@ -45,6 +45,11 @@ nav .main-nav {
     display: flex;
 }
 
+nav .main-nav a .logo {
+    max-height: 80% !important;
+    margin: 10% 0;
+}
+
 nav .main-nav div {
     margin: 0 15px;
     text-transform: uppercase;
@@ -115,6 +120,21 @@ nav .second-nav i {
 .carousel .carousel-item img {
     height: 700px;
     width: auto;
+}
+
+.carousel .indicators {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5%;
+}
+
+.carousel .indicators .indicator-item {
+    background-color: var(--color-yellow-dark);
+    width: 15px; height: 15px;
+}
+
+.carousel .indicators .indicator-item.active {
+    background-color: var(--color-yellow-light);
 }
 /* CAROUSEL ENDS */
 
