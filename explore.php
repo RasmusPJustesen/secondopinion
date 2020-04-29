@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $_SESSION['path'] = 'explore';
+?>
 <?php include "template/header.php"?>
 
     <section class="slideshow container">

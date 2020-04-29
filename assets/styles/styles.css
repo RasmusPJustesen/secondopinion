@@ -116,8 +116,8 @@ nav .second-nav i {
 }
 
 .carousel .carousel-item img {
-    height: 700px;
-    width: auto;
+    min-height: 700px;
+    width: 100%;
 }
 
 .carousel .indicators {

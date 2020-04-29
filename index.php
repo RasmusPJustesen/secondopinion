@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $_SESSION['path'] = 'home';
+?>
 <?php include "template/header.php"?>
 
     <section class="slideshow container">
@@ -6,6 +10,7 @@
 
     <section class="best-reviews container">
         <h3>Best Reviews</h3>
+        <!-- TODO: Replace these items with the items from the database with highest reviews -->
         <div class="best-reviews-container row">
             <div class="best-review-item col l4">
                 <img src="assets/images/goodwill.jpg" alt="">
