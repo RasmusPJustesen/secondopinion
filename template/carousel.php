@@ -17,6 +17,10 @@
             $slide1 = "<img src='assets/images/tigerking.jpg' alt=''>";
             $slide2 = "<img src='assets/images/manifest.jpg' alt=''>";
             $slide3 = "<img src='assets/images/witcher.jpg' alt=''>";
+        } else {
+            $slide1 = "<h1>Something went wrong!</h1>";
+            $slide2 = "<h1>Something went wrong!</h1>";
+            $slide3 = "<h1>Something went wrong!</h1>";
         }
     }
 ?>

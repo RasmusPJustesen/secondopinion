@@ -189,8 +189,8 @@ nav .second-nav i {
     color: var(--color-stars-grey);
 }
 
-.best-reviews .best-reviews-container .best-review-item .best-review-stars i {
-    cursor: pointer;
+.star-yellow {
+    color: var(--color-stars-yellow) !important;
 }
 
 .best-reviews .best-reviews-container .best-review-item h5 {

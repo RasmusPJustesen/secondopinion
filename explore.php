@@ -1,4 +1,7 @@
 <?php
+
+    include "config/db_connect.php";
+
     session_start();
     $_SESSION['path'] = 'explore';
 ?>
@@ -18,323 +21,32 @@
 
 
     <section class="explore container">
-        <!-- TODO: all of this will be rewritten using a php foreach loop -->
         <?php if(isset($_GET['content']) && $_GET['content'] == 'movies'): ?>
-            <h1>Movies!</h1>
-        <?php endif; ?>
-        <?php if(isset($_GET['content']) && $_GET['content'] == 'series'): ?>
+            <div class="row">
+                <?php foreach ($items as $item): ?>
+                    <div class="col col s12 m4 l2">
+                        <img src="<?php echo $item['image'] ?>" alt="">
+                        <div class="best-review-stars">
+                            <?php
+                            $yellow = $item['rating'];
+                            for ($i = 0;$i < $yellow; $i++ ): ?>
+                                <i class="fas fa-star star-yellow"></i>
+                            <?php endfor; ?>
+                            <?php
+                            $grey = 5 - $item['rating'];
+                            for ($i = 0; $i < $grey; $i++): ?>
+                                <i class="fas fa-star"></i>
+                            <?php endfor; ?>
+                        </div>
+                        <button>Explore</button>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php elseif(isset($_GET['content']) && $_GET['content'] == 'series'): ?>
             <h1>Series!</h1>
+        <?php else: ?>
+            <h1>No items pulled from database.</h1>
         <?php endif; ?>
-        <!--<div class="row">
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-            <div class="col col s12 m4 l2"><img src="assets/images/goodwill.jpg" alt="">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <button>Explore</button>
-            </div>
-        </div>-->
     </section>
 
 <?php include "template/footer.php" ?>
