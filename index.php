@@ -13,12 +13,9 @@
 
     <section class="best-reviews container">
         <h3>Best Reviews</h3>
-        <!-- TODO: Replace these items with the items from the database with highest reviews -->
-
         <div class="best-reviews-container row">
-
             <?php foreach ($items as $item): ?>
-            <div class="best-review-item col l4">
+            <div class="col s12 m4">
                 <img src="<?php echo $item['image'] ?>" alt="">
                 <div class="best-review-stars">
                     <?php

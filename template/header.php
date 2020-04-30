@@ -32,10 +32,13 @@
     <nav class="container">
         <div class="main-nav">
             <img src="assets/images/logo.png" class="logo" alt="">
-            <div>
+            <div class="hide-on-med-and-down">
                 <a href="index.php">Home</a>
                 <a href="explore.php?content=movies">Movies</a>
                 <a href="explore.php?content=series">Series</a>
+            </div>
+            <div class="hide-on-large-only show-on-med-and-down">
+                <i class="fas fa-bars"></i>
             </div>
         </div>
         <div class="second-nav">

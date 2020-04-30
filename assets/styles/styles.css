@@ -6,6 +6,10 @@ body {
     color: white;
 }
 
+.col {
+    margin-bottom: 20px;
+}
+
 :root {
     /* Colors */
     --color-headerfooter-background: #121111;
@@ -110,13 +114,14 @@ nav .second-nav i {
 
 /* CAROUSEL STARTS */
 .carousel .carousel-item {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .carousel .carousel-item img {
-    min-height: 700px;
+    height: auto;
     width: 100%;
 }
 
@@ -171,20 +176,16 @@ nav .second-nav i {
 /* CAROUSEL ENDS */
 
 /* BEST REVIEWS STARTS */
-.best-reviews .best-reviews-container {
-    display: flex;
-}
-
 .best-reviews h3 {
     padding-left: 0.75rem;
     margin: 80px 0;
 }
 
-.best-reviews .best-reviews-container .best-review-item img {
+.best-reviews .best-reviews-container .col img {
     width: 100%;
 }
 
-.best-reviews .best-reviews-container .best-review-item .best-review-stars {
+.best-reviews .best-reviews-container .col .best-review-stars {
     font-size: 2em;
     color: var(--color-stars-grey);
 }
@@ -193,12 +194,12 @@ nav .second-nav i {
     color: var(--color-stars-yellow) !important;
 }
 
-.best-reviews .best-reviews-container .best-review-item h5 {
-    font-size: 2.5em;
+.best-reviews .best-reviews-container .col h5 {
+    font-size: 2.5rem;
     font-weight: var(--font-medium);
 }
 
-.best-reviews .best-reviews-container .best-review-item button {
+.best-reviews .best-reviews-container .col button {
     width: 100%;
     font-size: 2.5em;
     padding: 10px 0;
@@ -293,9 +294,6 @@ footer {
 footer .some {
     width: 100%;
     padding: 30px 15%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     font-size: 3em;
     text-align: center;
 }
@@ -311,9 +309,6 @@ footer .custext {
     color: white;
     width: 100%;
     padding: 20px 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     font-size: 2em;
     font-weight: var(--font-medium);
     text-align: center;

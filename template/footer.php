@@ -1,14 +1,20 @@
 
 <footer>
-    <div class="some">
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-facebook-f"></i>
+    <div class="some row">
+        <div class="col s12 m4">
+            <i class="fab fa-twitter"></i>
+        </div>
+        <div class="col s12 m4">
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="col s12 m4">
+            <i class="fab fa-facebook-f"></i>
+        </div>
     </div>
-    <div class="custext">
-        <p>TEXT</p>
-        <p>TEXT</p>
-        <p>TEXT</p>
+    <div class="custext row">
+        <p class="col s12 m4">TEXT</p>
+        <p class="col s12 m4">TEXT</p>
+        <p class="col s12 m4">TEXT</p>
     </div>
 </footer>
 

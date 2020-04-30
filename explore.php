@@ -24,7 +24,7 @@
         <?php if(isset($_GET['content']) && $_GET['content'] == 'movies'): ?>
             <div class="row">
                 <?php foreach ($items as $item): ?>
-                    <div class="col col s12 m4 l2">
+                    <div class="col s12 m4 l2">
                         <img src="<?php echo $item['image'] ?>" alt="">
                         <div class="best-review-stars">
                             <?php

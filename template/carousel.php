@@ -6,17 +6,17 @@
 
     if(isset($_SESSION['path'])) {
         if ($_SESSION['path'] == 'home') {
-            $slide1 = "<img src='assets/images/blackwidow.jpg' alt=''>";
-            $slide2 = "<img src='assets/images/quiteplace2.jpg' alt=''>";
-            $slide3 = "<img src='assets/images/darkwaters.jpg' alt=''>";
+            $slide1 = "<img src='assets/images/banners/blackwidow.jpg' alt=''>";
+            $slide2 = "<img src='assets/images/banners/quiteplace2.jpg' alt=''>";
+            $slide3 = "<img src='assets/images/banners/darkwaters.jpg' alt=''>";
         } elseif ($_SESSION['path'] == 'explore' && $_GET['content'] == 'movies') {
-            $slide1 = "<img src='assets/images/blackwidow.jpg' alt=''>";
-            $slide2 = "<img src='assets/images/quiteplace2.jpg' alt=''>";
-            $slide3 = "<img src='assets/images/darkwaters.jpg' alt=''>";
+            $slide1 = "<img src='assets/images/banners/blackwidow.jpg' alt=''>";
+            $slide2 = "<img src='assets/images/banners/quiteplace2.jpg' alt=''>";
+            $slide3 = "<img src='assets/images/banners/darkwaters.jpg' alt=''>";
         } elseif ($_SESSION['path'] == 'explore' && $_GET['content'] == 'series') {
-            $slide1 = "<img src='assets/images/tigerking.jpg' alt=''>";
-            $slide2 = "<img src='assets/images/manifest.jpg' alt=''>";
-            $slide3 = "<img src='assets/images/witcher.jpg' alt=''>";
+            $slide1 = "<img src='assets/images/banners/tigerking.jpg' alt=''>";
+            $slide2 = "<img src='assets/images/banners/manifest.jpg' alt=''>";
+            $slide3 = "<img src='assets/images/banners/witcher.jpg' alt=''>";
         } else {
             $slide1 = "<h1>Something went wrong!</h1>";
             $slide2 = "<h1>Something went wrong!</h1>";
@@ -25,19 +25,19 @@
     }
 ?>
 <div class="carousel carousel-slider center">
-    <div class="carousel-item red white-text" href="#one!">
+    <div class="carousel-item white-text" href="#one!">
         <?php echo $slide1 ?>
     </div>
-    <div class="carousel-item amber white-text" href="#two!">
+    <div class="carousel-item white-text" href="#two!">
         <?php echo $slide2 ?>
     </div>
-    <div class="carousel-item green white-text" href="#three!">
+    <div class="carousel-item white-text" href="#three!">
         <?php echo $slide3 ?>
     </div>
-    <div class="carousel-arrow-left">
+    <div class="carousel-arrow-left hide-on-med-and-down">
         <div class="carousel-arrow-left-item"></div>
     </div>
-    <div class="carousel-arrow-right">
+    <div class="carousel-arrow-right hide-on-med-and-down">
         <div class="carousel-arrow-right-item"></div>
     </div>
 </div>
