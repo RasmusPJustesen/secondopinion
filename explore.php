@@ -27,11 +27,11 @@
         <?php if(isset($_GET['content']) && $_GET['content'] == 'movies'): ?>
             <div class="row">
                 <?php foreach ($items as $item): ?>
-                    <?php if ($item->{'movietype'} == 'Movie'): ?>
+                    <?php if ($item['movietype'] == 'Movie'): ?>
                         <div class="col s12 m4 l2">
-                            <img src="<?php echo $item->{'Image'} ?>" alt="">
-                            <h5><?php echo $item->{'Moviename'} ?></h5>
-                            <a href="product.php?id=<?php echo $item->{'Id'} ?>"><button>Explore</button></a>
+                            <img src="<?php echo $item['Image'] ?>" alt="">
+                            <h5><?php echo $item['Moviename'] ?></h5>
+                            <a href="product.php?id=<?php echo $item['Id'] ?>"><button>Explore</button></a>
                         </div>
                     <?php endif; ?>
                 <?php endforeach; ?>
@@ -39,11 +39,11 @@
         <?php elseif(isset($_GET['content']) && $_GET['content'] == 'series'): ?>
             <div class="row">
                 <?php foreach ($items as $item): ?>
-                    <?php if ($item->{'movietype'} == 'Series'): ?>
+                    <?php if ($item['movietype'] == 'Series'): ?>
                         <div class="col s12 m4 l2">
-                            <img src="<?php echo $item->{'Image'} ?>" alt="">
-                            <h5><?php echo $item->{'Moviename'} ?></h5>
-                            <a href="product.php?id=<?php echo $item->{'Id'} ?>"><button>Explore</button></a>
+                            <img src="<?php echo $item['Image'] ?>" alt="">
+                            <h5><?php echo $item['Moviename'] ?></h5>
+                            <a href="product.php?id=<?php echo $item['Id'] ?>"><button>Explore</button></a>
                         </div>
                     <?php endif; ?>
                 <?php endforeach; ?>
