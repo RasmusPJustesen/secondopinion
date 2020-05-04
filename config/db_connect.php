@@ -9,23 +9,5 @@ if (!$conn) {
 }
 
 
-
-/* This is a dummy database */
-$items = [
-    [
-        'title' => 'Shutter Island',
-        'rating' => 4,
-        'image' => 'assets/images/goodwill.jpg'
-    ],
-    [
-        'title' => 'Good Will Hunting',
-        'rating' => 2,
-        'image' => 'assets/images/goodwill.jpg'
-    ],
-    [
-        'title' => 'White Chicks',
-        'rating' => 5,
-        'image' => 'assets/images/goodwill.jpg'
-    ]
-];
-/* End of dummy database */
+$json = file_get_contents('http://127.0.0.1:8000/api/tasks');
+$items = json_decode($json);

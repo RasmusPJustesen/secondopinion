@@ -12,38 +12,42 @@
     </section>
 
     <section class="explore-title container">
-        <h1>Movies</h1>
+        <?php if(isset($_GET['content']) && $_GET['content'] == 'movies'): ?>
+            <h1>Movies</h1>
+        <?php elseif(isset($_GET['content']) && $_GET['content'] == 'series'): ?>
+            <h1>Series</h1>
+        <?php endif; ?>
     </section>
 
     <section class="genres container">
         <?php include "template/genres.php" ?>
     </section>
 
-
     <section class="explore container">
         <?php if(isset($_GET['content']) && $_GET['content'] == 'movies'): ?>
             <div class="row">
                 <?php foreach ($items as $item): ?>
-                    <div class="col s12 m4 l2">
-                        <img src="<?php echo $item['image'] ?>" alt="">
-                        <div class="best-review-stars">
-                            <?php
-                            $yellow = $item['rating'];
-                            for ($i = 0;$i < $yellow; $i++ ): ?>
-                                <i class="fas fa-star star-yellow"></i>
-                            <?php endfor; ?>
-                            <?php
-                            $grey = 5 - $item['rating'];
-                            for ($i = 0; $i < $grey; $i++): ?>
-                                <i class="fas fa-star"></i>
-                            <?php endfor; ?>
+                    <?php if ($item->{'movietype'} == 'Movie'): ?>
+                        <div class="col s12 m4 l2">
+                            <img src="<?php echo $item->{'Image'} ?>" alt="">
+                            <h5><?php echo $item->{'Moviename'} ?></h5>
+                            <a href="product.php?id=<?php echo $item->{'Id'} ?>"><button>Explore</button></a>
                         </div>
-                        <button>Explore</button>
-                    </div>
+                    <?php endif; ?>
                 <?php endforeach; ?>
             </div>
         <?php elseif(isset($_GET['content']) && $_GET['content'] == 'series'): ?>
-            <h1>Series!</h1>
+            <div class="row">
+                <?php foreach ($items as $item): ?>
+                    <?php if ($item->{'movietype'} == 'Series'): ?>
+                        <div class="col s12 m4 l2">
+                            <img src="<?php echo $item->{'Image'} ?>" alt="">
+                            <h5><?php echo $item->{'Moviename'} ?></h5>
+                            <a href="product.php?id=<?php echo $item->{'Id'} ?>"><button>Explore</button></a>
+                        </div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </div>
         <?php else: ?>
             <h1>No items pulled from database.</h1>
         <?php endif; ?>
