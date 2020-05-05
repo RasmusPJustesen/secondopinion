@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -46,9 +49,15 @@
                 <input type="text" class="browser-default" placeholder="search">
                 <i class="fas fa-search"></i>
             </div>
-            <a href="account.php">
-                <i class="fas fa-user"></i>
-            </a>
+            <?php if (isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'] == true): ?>
+                <a href="account.php?logout=logout">
+                    <p>Logout</p>
+                </a>
+            <?php else: ?>
+                <a href="account.php">
+                    <i class="fas fa-user"></i>
+                </a>
+            <?php endif; ?>
         </div>
     </nav>
 </header>

@@ -1,3 +1,4 @@
+<?php include "template/header.php"?>
 <?php
     if (isset($_GET['id'])) {
         include "config/db_connect.php";
@@ -84,7 +85,6 @@
         echo 'Some went wrong!';
     }
 ?>
-<?php include "template/header.php"?>
 
     <div class="row container">
         <div class="col s12 m6 product-banner img">
@@ -143,47 +143,49 @@
         </div>
         <?php endforeach; ?>
     </div>
-    <div class="product comments container">
-        <h3>Leave a comment</h3>
-        <form action="product.php?id=<?php echo $_GET['id'] ?>" method="POST" class="product-comments-container">
-            <input type="text" name="heading" placeholder="Heading ...">
-            <div class="product-comments-rating">
-                <p>Rate Movie: </p>
-                <div class="best-review-stars">
-                    <i class="fas fa-star st1" onclick="addStar(1)"></i>
-                    <i class="fas fa-star st2" onclick="addStar(2)"></i>
-                    <i class="fas fa-star st3" onclick="addStar(3)"></i>
-                    <i class="fas fa-star st4" onclick="addStar(4)"></i>
-                    <i class="fas fa-star st5" onclick="addStar(5)"></i>
+    <?php if ($_SESSION['isLoggedIn'] == true): ?>
+        <div class="product comments container">
+            <h3>Leave a comment</h3>
+            <form action="product.php?id=<?php echo $_GET['id'] ?>" method="POST" class="product-comments-container">
+                <input type="text" name="heading" placeholder="Heading ...">
+                <div class="product-comments-rating">
+                    <p>Rate Movie: </p>
+                    <div class="best-review-stars">
+                        <i class="fas fa-star st1" onclick="addStar(1)"></i>
+                        <i class="fas fa-star st2" onclick="addStar(2)"></i>
+                        <i class="fas fa-star st3" onclick="addStar(3)"></i>
+                        <i class="fas fa-star st4" onclick="addStar(4)"></i>
+                        <i class="fas fa-star st5" onclick="addStar(5)"></i>
+                    </div>
                 </div>
-            </div>
-            <input type="hidden" name="rating" id="iptRating" value="0">
-            <input type="hidden" name="userid" value="<?php echo 1 ?>">
-            <textarea name="comment" placeholder="Type Comment ..."></textarea>
-            <input type="submit" name="submit" value="Publish">
-        </form>
-    </div>
-    <script>
-        const star1 = $('.st1');
-        const star2 = $('.st2');
-        const star3 = $('.st3');
-        const star4 = $('.st4');
-        const star5 = $('.st5');
+                <input type="hidden" name="rating" id="iptRating" value="0">
+                <input type="hidden" name="userid" value="<?php echo $_SESSION['userID'] ?>">
+                <textarea name="comment" placeholder="Type Comment ..."></textarea>
+                <input type="submit" name="submit" value="Publish">
+            </form>
+        </div>
+        <script>
+            const star1 = $('.st1');
+            const star2 = $('.st2');
+            const star3 = $('.st3');
+            const star4 = $('.st4');
+            const star5 = $('.st5');
 
-        let rating = 0;
+            let rating = 0;
 
-        function addStar(n) {
-            rating = n;
-            console.log(rating);
-            for (let i = 0; i <= rating; i++) {
-                $('.st' + i).addClass('star-yellow');
-                $('.st' + (i + 1)).removeClass('star-yellow');
-                $('.st' + (i + 2)).removeClass('star-yellow');
-                $('.st' + (i + 3)).removeClass('star-yellow');
-                $('.st' + (i + 4)).removeClass('star-yellow');
+            function addStar(n) {
+                rating = n;
+                console.log(rating);
+                for (let i = 0; i <= rating; i++) {
+                    $('.st' + i).addClass('star-yellow');
+                    $('.st' + (i + 1)).removeClass('star-yellow');
+                    $('.st' + (i + 2)).removeClass('star-yellow');
+                    $('.st' + (i + 3)).removeClass('star-yellow');
+                    $('.st' + (i + 4)).removeClass('star-yellow');
+                }
+                $('#iptRating').val(rating);
             }
-            $('#iptRating').val(rating);
-        }
-    </script>
+        </script>
+    <?php endif; ?>
 
 <?php include "template/footer.php" ?>

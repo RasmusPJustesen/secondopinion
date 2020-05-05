@@ -1,11 +1,10 @@
+<?php include "template/header.php"?>
 <?php
 
-    include "config/db_connect.php";
+include "config/db_connect.php";
 
-    session_start();
-    $_SESSION['path'] = 'explore';
+$_SESSION['path'] = 'explore';
 ?>
-<?php include "template/header.php"?>
 
     <section class="slideshow container">
         <?php include "template/carousel.php" ?>

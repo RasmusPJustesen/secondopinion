@@ -1,27 +1,25 @@
+<?php include "template/header.php"?>
 <?php
 
-    include "config/db_connect.php";
+include "config/db_connect.php";
 
-    $sqlRandomReview = "SELECT rating, movie_id FROM ratings";
+$sqlRandomReview = "SELECT rating, movie_id FROM ratings";
 
-    $resultRandomReview = mysqli_query($conn, $sqlRandomReview);
+$resultRandomReview = mysqli_query($conn, $sqlRandomReview);
 
-    $randomReview = mysqli_fetch_all($resultRandomReview, MYSQLI_ASSOC);
+$randomReview = mysqli_fetch_all($resultRandomReview, MYSQLI_ASSOC);
 
-    mysqli_free_result($resultRandomReview);
+mysqli_free_result($resultRandomReview);
 
-    $randomReviewArray = array();
+$randomReviewArray = array();
 
-    for ($i = 1; $i <= 3; $i++) {
-        $r = rand(1, 60);
-        array_push($randomReviewArray, $randomReview[$r]['movie_id']);
-    }
+for ($i = 1; $i <= 3; $i++) {
+    $r = rand(1, 60);
+    array_push($randomReviewArray, $randomReview[$r]['movie_id']);
+}
 
-    session_start();
-    $_SESSION['path'] = 'home';
+$_SESSION['path'] = 'home';
 ?>
-<?php include "template/header.php"?>
-
     <section class="slideshow container">
         <?php include "template/carousel.php" ?>
     </section>
